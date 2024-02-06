@@ -145,7 +145,7 @@ p {
     }
 
     .hamburger-menu span:nth-child(2) {
-        width: 20px;
+        width: 12px;
         transition: opacity 0.4s ease-in-out, width 0.4s ease-in-out;
     }
 
