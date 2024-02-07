@@ -10,5 +10,9 @@ Welcome to the "Implement a Design from Scratch" project, masterfully guided by 
 
 You won’t have a lot of specific instructions; you are free to implement the web page in the way that you find suitable. The objective is clear: create a fully functional web page that matches the designer's vision.
 
+The final result should look like this :
+
+![Designer file](./images/designer_file_template.jpg)
+
 ## Author
 - [Benjamin Alazet](https://github.com/Yliaze) - Holberton School
