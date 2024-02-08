@@ -1,0 +1,479 @@
+@font-face {
+    font-family: 'HolbertonSchoolIcon';
+    src: url('holberton_school-icon.eot');
+    src: url('holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+         url('holberton_school-icon.woff') format('woff'),
+         url('../fonts/holberton_school-icon.ttf') format('truetype'),
+		 url('../fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Custom font with icons */
+
+.icon {
+    font-family: 'HolbertonSchoolIcon';
+    font-size: 100px;
+	color: #FF6565;
+}
+
+/* GENERAL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    max-width: 637px;
+}
+
+/* Content */
+
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (max-width: 770px) {
+    .container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    height: 800px;
+    background-image: url("./images/headphones_hero_1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        width: 100%;
+        height: 869px;
+    }
+}
+
+/* Navigation */
+
+.desktop-nav,
+.nav-links {
+    display: flex;
+}
+
+.desktop-nav {
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+@media screen and (max-width: 770px) {
+    .desktop-nav {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #FF6565;
+}
+
+.nav-logo img {
+    width: 161px;
+}
+
+/* Burger Navigation */
+
+.hamburger-nav {
+    display: none; /* Hidden burger section */
+}
+
+@media screen and (max-width: 520px) { /* mediaquery at 520px for better user experience  */
+    .desktop-nav,
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburger-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-logo {
+        flex-grow: 1;
+        text-align: center;
+        padding-right: 50px;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 20px;
+        height: 2.5px;
+        background-color: white;
+        margin: 5px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .hamburger-menu span:nth-child(2) {
+        width: 12px;
+        transition: opacity 0.4s ease-in-out, width 0.4s ease-in-out;
+    }
+
+    #menu-toggle:checked + .hamburger-menu span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    #menu-toggle:checked + .hamburger-menu span:nth-child(2) {
+        opacity: 0;
+        width: 0;
+    }
+
+    #menu-toggle:checked + .hamburger-menu span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .hamburger-nav .nav-hamburger-menu {
+        position: absolute;
+        top: 7%;
+        left: 0;
+        background-color: transparent;
+        width: 88%;
+        text-align: center;
+        display: none;
+    }
+
+    #menu-toggle:checked + .hamburger-menu ~ .nav-hamburger-menu {
+        display: block; /* Display burger menu */
+    }
+
+    .nav-hamburger-menu .nav-links {
+        display: flex;
+        flex-direction: column;
+    }  
+}
+
+/* Hero Section */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16rem;
+}
+
+.hero-section h1 {
+    margin-bottom: 0.3rem;
+}
+
+.hero-section h3 {
+    margin: 0 50px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+.hero-section .header-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background-color: #FF6565;
+    height: 44px;
+    width: 162px;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.hero-section .header-btn:hover {
+    opacity: 0.9
+}
+
+/* What We Do Section */
+
+.what-we-do {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    color: #071629;
+}
+
+.text-we-do {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.what-we-do .row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 97px;
+}
+
+@media screen and (max-width: 770px) {
+    .what-we-do .row {
+        flex-wrap: wrap;
+        justify-content: space-around;  
+    }
+}
+
+.col-sections {
+    width: 240px;
+}
+
+.hero-section h3 {
+    font-size: 18px;
+}
+
+/* Our Results Section */
+
+.our-results {
+    width: 100%;
+    height: 650px;
+    background-image: url("./images/headphones_hero_2.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    padding-top: 110px;
+}
+
+@media screen and (max-width: 770px) {
+    .our-results {
+        height: auto;
+    }
+}
+
+.text-our-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.our-results .row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 770px) {
+    .our-results .row {
+        flex-wrap: wrap;
+        justify-content: space-around;  
+    }
+}
+
+.pentagone-container { /* Define pentagone as shape  */
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.pentagone-container .penta-img {
+    width: 190px;
+}
+
+.pentagone-container .penta-text { /* Put and center text on img  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pentagone-container .penta-text h1 {
+    padding-top: 12px;
+    margin-bottom: 15px;
+    font-size: 46px;
+}
+
+.pentagone-container .penta-text p {
+    font-size: 14px;
+}
+
+/* Contact Us Section */
+
+.contact-us {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    color: #071629;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: none;
+    padding: 0 0 2rem;
+}
+
+.contact-us label {
+    cursor: pointer;
+    display: block;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 0 0 45px;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 335px;
+    padding: 1.2rem;
+    border: none;
+    border-bottom: 1px solid black;
+    border-color: #FF6565;
+    box-shadow: none;
+    color: #071629;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 480px) {
+    input[type=text], input[type=email], textarea {
+        max-width: 200px;
+    } 
+}
+
+input:focus, textarea:focus {
+    outline-color: #FF6565;
+}
+
+::placeholder {
+    font-weight: 500;
+    color: #071629;
+}
+
+.form-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background-color: #FF6565;
+    height: 44px;
+    width: 162px;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.form-btn:hover {
+    opacity: 0.9
+}
+
+/* Helpers */
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Footer */
+
+footer {
+    background-color: #071629;
+    min-height: 250px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 45px;
+        padding: 40px;
+    }
+}
+
+.footer-logo img {
+    max-width: 161px;
+}
+
+.social-icons {
+    font-family: 'HolbertonSchoolIcon';
+    font-size: 30px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.3;
+}
